@@ -81,7 +81,7 @@
   }
 
   body {
-    font-family: "Comic-Code-Regular","Comic Sans MS", "Comic Sans", sans-serif;
+    font-family: "Comic-Code-Regular", "Comic Sans MS", "Comic Sans", sans-serif;
     background-color: #FFDDDD;
   }
   
@@ -337,7 +337,8 @@
 </style>
 
   <title>Princess Pi's Magical Nmap Scan Report! - Scanned at <xsl:value-of select="$start" /></title>
-	
+
+	<link rel="icon" type="image/x-icon" href="/nmaprincesspi/img/favicon.ico" />
    
     <script type="text/javascript">
      
