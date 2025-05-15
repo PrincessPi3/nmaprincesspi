@@ -81,7 +81,7 @@
   }
 
   body {
-    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
+    font-family: "Comic-Code-Regular","Comic Sans MS", "Comic Sans", sans-serif;
     background-color: #FFDDDD;
   }
   
@@ -146,7 +146,7 @@
 @media screen
 {
   body {
-    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
+    font-family: "Comic-Code-Regular", "Comic Sans MS", "Comic Sans", sans-serif;
     background-image: url('/nmaprincesspi/img/princesspi-large-alpha-transparency-more-faded.png');
     background-repeat: no-repeat;
     background-color: #FFDDDD;
@@ -162,9 +162,9 @@
   }
 
   h1 {
-    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
+    font-family: "Comic-Code-Regular", "Comic Sans MS", "Comic Sans", sans-serif;
     font-weight: bold;
-    font-size: 14pt;
+    font-size: 2em;
     color: #800080;
     background-color: #FFB4C0;
     margin: 10px 0 0 0;
@@ -175,9 +175,9 @@
   }
 
   h2 {
-    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
+    font-family: "Comic-Code-Regular","Comic Sans MS", "Comic Sans", sans-serif;
     font-weight:bold;
-    font-size: 11pt;
+    font-size: 1.7em;
     color: #800080;
     margin:30px 0px 0px 0px;
     padding:4px;
@@ -199,9 +199,9 @@
   }
    
   h3 {
-    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
+    font-family: "Comic-Code-Regular","Comic Sans MS", "Comic Sans", sans-serif;
     font-weight:bold;
-    font-size: 10pt;
+    font-size: 1.5em;
     color: #800080;
     background-color: #FFB4C0;
     width: 75%;
@@ -209,8 +209,8 @@
   }
 
   p {
-    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
-    font-size: 8pt;
+    font-family: "Comic-Code-Regular", "Comic Sans MS", "Comic Sans", sans-serif;
+    font-size: 1em;
     color: #800080;
     background-color: #FFB4C0;
     width: 75%;
@@ -218,15 +218,15 @@
   }
 
   p i {
-    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
-    font-size: 8pt;
+    font-family: "Comic-Code-Regular", "Comic Sans MS", "Comic Sans", sans-serif;
+    font-size: 1em;
     color: #800080;
     background-color: #FFEEEE;
   }
 
   ul {
-    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
-    font-size: 8pt;
+    font-family: "Comic-Code-Regular","Comic Sans MS", "Comic Sans", sans-serif;
+    font-size: 1em;
     color: #800080;
     background-color: #FFB4C0;
     width: 75%;
@@ -234,18 +234,18 @@
   }
 
   a {
-    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
+    font-family: "Comic-Code-Regular","Comic Sans MS", "Comic Sans", sans-serif;
     text-decoration: none;
-    font-size: 8pt;
+    font-size: 1em;
     font-weight: bold;
     background-color: #FFB4C0;
     color: #800080;
   }
 
   li a {
-    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
+    font-family: "Comic-Code-Regular","Comic Sans MS", "Comic Sans", sans-serif;
     text-decoration: none;
-    font-size: 10pt;
+    font-size: 1em;
     font-weight: bold;
     background-color: #FFB4C0;
     color: #800080;
@@ -269,8 +269,8 @@
 
   tr {
     vertical-align:top;
-    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
-    font-size: 8pt;
+    font-family: "Comic-Code-Regular","Comic Sans MS", "Comic Sans", sans-serif;
+    font-size: 1em;
     color: #800080;
     background-color: #FFB4C0;
   }
@@ -314,8 +314,8 @@
  
   #menubox {
     position: fixed;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0;
+    right: 0;
     width: 120px;
   }
  
