@@ -1,3 +1,8 @@
-xhr->run_scan.php
+x xhr->run_scan.php
+move and edit scripts
+status/notify when done
+    polling?
+scans listing
+work on scans filename?
 fix perms
 auth system

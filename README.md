@@ -1,4 +1,5 @@
-# silly lil nmap thing
+# nmaprincesspi
+silly little nmap web thing
 
 add alias to .zshrc or .basrc  
     `alias nmap="/var/www/html/nmaprincesspi/nmap-script.sh"`
