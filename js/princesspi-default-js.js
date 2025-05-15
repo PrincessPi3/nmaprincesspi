@@ -14,6 +14,8 @@ function copyToClipboard(ID) {
 
 function xhrSuccess(xhrRet) {
     let xhrResponseText = xhrRet.target.responseText;
+    getID('out').innerHTML = '<a href="'+xhrResponseText+'">Scan Report Here ('+xhrResponseText+')</a>';
+    getID('out').style.display = "inline";
 }
 
 function xhr404(xhrRet) {
@@ -43,7 +45,13 @@ function doXhr(xhrFilePath, xhrMethod='GET', xhrPostData=null) {
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("loadend", xhrLoadend);
     xhr.open(xhrMethod, xhrFilePath);
-    xhr.send();
+
+    if(xhrMethod == 'POST') {
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send(xhrPostData);
+    } else {
+        xhr.send();
+    }
 }
 
 function changeFavIcon(icoFile) {
@@ -58,4 +66,11 @@ function changeFavIcon(icoFile) {
     document.head.appendChild(icoLink);
 
     icoLink.href = icoFile;
-}   
+} 
+
+function runNmapScan() {
+    let nmapcmd = getID('nmapcmd').value;
+    console.log(nmapcmd);
+    let postData = 'nmapcmd='+encodeURIComponent(nmapcmd);
+    doXhr('run_scan.php', 'POST', postData);
+}

@@ -14,5 +14,4 @@
     echo $web_name;
 
     $exec = shell_exec($run_cmd);
-    echo $exec;
 ?>

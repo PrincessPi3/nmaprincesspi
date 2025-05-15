@@ -269,7 +269,7 @@
 
   tr {
     vertical-align:top;
-    font-family: "Comic-Code-Regular","Comic Sans MS", "Comic Sans", sans-serif;
+    font-family: "Comic-Code-Regular", "Comic Sans MS", "Comic Sans", sans-serif;
     font-size: 1em;
     color: #800080;
     background-color: #FFB4C0;

@@ -10,12 +10,14 @@
 */
 
 @font-face {
-    font-family: 'Comic Code Regular';
-    src: url('fonts/ComicCodeRegular.otf');
+  font-family: "Comic-Code-Regular";
+  src: url("fonts/Comic-Code-Regular.ttf"),
+       url("fonts/Comic-Code-Regular.woff"),
+       url("fonts/Comic-Code-Regular.otf");
 }
 
 body {
-    font-family: "Comic Code Regular", "Comic Sans MS", 'Courier New', Courier, monospace;
+    font-family: "Comic-Code-Regular", "Comic Sans MS", "Comic Sans", sans-serif;
     font-weight: bold;
     color: #800080;
 
