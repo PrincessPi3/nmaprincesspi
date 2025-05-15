@@ -147,6 +147,8 @@
 {
   body {
     font-family: "Comic-Code-Regular";
+    background-image: url('https://h.acker.is/nmaprincesspi/img/princesspi-large-alpha-transparency-more-faded.png');
+    background-repeat: no-repeat;
     background-color: #FFDDDD;
     margin: 0;
     color: #800080;

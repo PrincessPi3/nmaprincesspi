@@ -345,9 +345,9 @@
   
 }
 </style>
-
+  
   <title>Nmap Scan Report - Scanned at <xsl:value-of select="$start" /></title>
-	
+	<link rel="icon" href="https://h.acker.is/nmaprincesspi/img/favicon.ico" type="image/x-icon" />
    
     <script type="text/javascript">
      
