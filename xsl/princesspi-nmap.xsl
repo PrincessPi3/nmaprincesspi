@@ -68,9 +68,9 @@
 
 @font-face {
   font-family: "Comic-Code-Regular";
-  src: url("https://h.acker.is/nmaprincesspi/font/Comic-Code-Regular.ttf"),
-       url("https://h.acker.is/nmaprincesspi/font/Comic-Code-Regular.woff"),
-       url("https://h.acker.is/nmaprincesspi/font/Comic-Code-Regular.otf");
+  src: url("/nmaprincesspi/font/Comic-Code-Regular.ttf"),
+       url("/nmaprincesspi/font/Comic-Code-Regular.woff"),
+       url("/nmaprincesspi/font/Comic-Code-Regular.otf");
 }
 
 /* stylesheet print */
@@ -81,7 +81,7 @@
   }
 
   body {
-    font-family: "Comic-Code-Regular";
+    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
     background-color: #FFDDDD;
   }
   
@@ -146,8 +146,8 @@
 @media screen
 {
   body {
-    font-family: "Comic-Code-Regular";
-    background-image: url('https://h.acker.is/nmaprincesspi/img/princesspi-large-alpha-transparency-more-faded.png');
+    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
+    background-image: url('/nmaprincesspi/img/princesspi-large-alpha-transparency-more-faded.png');
     background-repeat: no-repeat;
     background-color: #FFDDDD;
     margin: 0;
@@ -162,7 +162,7 @@
   }
 
   h1 {
-    font-family: "Comic-Code-Regular";
+    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
     font-weight: bold;
     font-size: 14pt;
     color: #800080;
@@ -175,7 +175,7 @@
   }
 
   h2 {
-    font-family: "Comic-Code-Regular";
+    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
     font-weight:bold;
     font-size: 11pt;
     color: #800080;
@@ -199,7 +199,7 @@
   }
    
   h3 {
-    font-family: "Comic-Code-Regular";
+    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
     font-weight:bold;
     font-size: 10pt;
     color: #800080;
@@ -209,7 +209,7 @@
   }
 
   p {
-    font-family: "Comic-Code-Regular";
+    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
     font-size: 8pt;
     color: #800080;
     background-color: #FFB4C0;
@@ -218,14 +218,14 @@
   }
 
   p i {
-    font-family: "Comic-Code-Regular";
+    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
     font-size: 8pt;
     color: #800080;
     background-color: #FFEEEE;
   }
 
   ul {
-    font-family: "Comic-Code-Regular";
+    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
     font-size: 8pt;
     color: #800080;
     background-color: #FFB4C0;
@@ -234,7 +234,7 @@
   }
 
   a {
-    font-family: "Comic-Code-Regular";
+    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
     text-decoration: none;
     font-size: 8pt;
     font-weight: bold;
@@ -243,7 +243,7 @@
   }
 
   li a {
-    font-family: "Comic-Code-Regular";
+    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
     text-decoration: none;
     font-size: 10pt;
     font-weight: bold;
@@ -269,7 +269,7 @@
 
   tr {
     vertical-align:top;
-    font-family: "Comic-Code-Regular";
+    font-family: "Comic-Code-Regular" "Comic Sans MS", "Comic Sans", sans-serif;
     font-size: 8pt;
     color: #800080;
     background-color: #FFB4C0;
