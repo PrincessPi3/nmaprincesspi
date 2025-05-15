@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/princesspi-default-css.css">
+    <link rel="stylesheet" href="css/nmaprincesspi.css">
+    <script src="js/nmaprincesspi.js"></script>
     <link rel="icon" type="css/img/" href="css/img/favicon.ico">
     <title>Princess Pi's Magical Nmap Web Thingy!</title>
 </head>
@@ -15,6 +16,5 @@
         <input type="button" onclick="runNmapScan()" value="Go, Baby, Go!">
         <br>
         <span class="hidden" id="out"></span>
-    <script src="js/princesspi-default-js.js"></script>
 </body>
 </html>

@@ -74,3 +74,9 @@ function runNmapScan() {
     let postData = 'nmapcmd='+encodeURIComponent(nmapcmd);
     doXhr('run_scan.php', 'POST', postData);
 }
+
+function pollFile(filePath) {
+    var poll = setInterval(function() {
+        doXhr(filePath);
+    }, 1000);
+}
