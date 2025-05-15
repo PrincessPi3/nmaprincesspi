@@ -9,7 +9,7 @@
 
     $file_name = date("Ymd-Hi-s") . ".xml";
     $run_cmd = "nmap -oX scans/$file_name --stylesheet /nmaprincesspi/xsl/princesspi-nmap.xsl $post_cmd &";
-    $web_name = "/nmaprincesspi/scripts/$file_name";
+    $web_name = "/nmaprincesspi/scans/$file_name";
 
     echo $web_name;
 
