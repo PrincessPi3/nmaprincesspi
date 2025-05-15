@@ -1,8 +1,15 @@
 x xhr->run_scan.php
-move and edit scripts
+x add random number to file to prevent enumeration
+x move and edit scripts
 status/notify when done
-    polling?
+    polling xml file?
+error handling
+    nmap fail
+    php script fail
+    input validation fail
+containerize
 scans listing
-work on scans filename?
+c work on scans filename?
 fix perms
 auth system
+input/output validation
