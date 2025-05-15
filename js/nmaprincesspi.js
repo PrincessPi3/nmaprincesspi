@@ -14,8 +14,8 @@ function copyToClipboard(ID) {
 
 function xhrSuccess(xhrRet) {
     let xhrResponseText = xhrRet.target.responseText;
-    getID('out').innerHTML = '<a href="'+xhrResponseText+'">Scan Report Here ('+xhrResponseText+')</a>';
-    getID('out').style.display = "inline";
+    getID('link').innerHTML = '<a href="'+xhrResponseText+'">Scan Report Here ('+xhrResponseText+')</a>';
+    getID('link').style.display = "inline";
 }
 
 function xhr404(xhrRet) {
@@ -41,9 +41,9 @@ function xhrLoadend(xhrRet) {
     }
 }
 
-function doXhr(xhrFilePath, xhrMethod='GET', xhrPostData=null) {
+function doXhr(xhrFilePath, xhrLoadEndFun=xhrLoadEnd, xhrMethod='GET', xhrPostData=null) {
     const xhr = new XMLHttpRequest();
-    xhr.addEventListener("loadend", xhrLoadend);
+    xhr.addEventListener("loadend", xhrLoadEndFun);
     xhr.open(xhrMethod, xhrFilePath);
 
     if(xhrMethod == 'POST') {
@@ -68,15 +68,39 @@ function changeFavIcon(icoFile) {
     icoLink.href = icoFile;
 } 
 
-function runNmapScan() {
-    let nmapcmd = getID('nmapcmd').value;
-    console.log(nmapcmd);
-    let postData = 'nmapcmd='+encodeURIComponent(nmapcmd);
-    doXhr('run_scan.php', 'POST', postData);
+function xhrRunNmapScan(xhrRet) {
+    // let xhrResponseText = xhrRet.target.responseText;
+    xhrJson = JSON.parse(xhrRet.target.responseText);
+
+    getID('link').innerHTML = '<a href="'+xhrJson.webName+'">Scan Report Here ('+xhrJson.webName+')</a>';
+    getID('link').style.display = "inline";
+
+    if(typeof pollInterval !== 'undefined') {
+        clearInterval(pollInterval);
+    }
+
+    getID('progress').innerHTML = '';
+    getID('progress').style.display = 'none';
+
+    pollFile(xhrJson.runningLog);
+
 }
 
-function pollFile(filePath) {
-    var poll = setInterval(function() {
-        doXhr(filePath);
+function xhrPollFile(xhrRet) {
+    let xhrResponseText = xhrRet.target.responseText;
+    getID('progress').innerHTML = xhrResponseText;
+    getID('progress').style.display = "block";
+}
+
+function pollFile(runningLog) {
+    var pollInterval = setInterval(function() {
+        doXhr(runningLog, xhrPollFile);
     }, 1000);
+}
+
+function runNmapScan() {
+    let nmapcmd = getID('nmapcmd').value;
+    let postData = 'nmapcmd='+encodeURIComponent(nmapcmd);
+
+    doXhr('run_scan.php', xhrRunNmapScan, 'POST', postData);
 }

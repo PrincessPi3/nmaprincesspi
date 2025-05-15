@@ -13,3 +13,9 @@ c work on scans filename?
 fix perms
 auth system
 input/output validation
+work on princesspi-nmap.xsl
+    clean up
+    minimize stuff
+        remove rundundant code
+    make prettier
+        green class
