@@ -1,0 +1,132 @@
+/*
+    Princess Pi's Magical Standard Code!
+
+    colors:
+        pale pink background: #FFDDDD
+        slightly lighter pink background like on inputs #FFEEEE
+        dark purple like text: #800080
+        slightly darker than true pink like in input focus: #FFB4C0
+        true blue like on input focus and hover borders: #0000FF 
+*/
+
+@font-face {
+    font-family: 'Comic Code Regular';
+    src: url('fonts/ComicCodeRegular.otf');
+}
+
+body {
+    font-family: "Comic Code Regular", "Comic Sans MS", 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #800080;
+
+    background-image: url('img/princesspi-large-alpha-transparency-more-faded.png');
+    background-color: #FFDDDD;
+    background-repeat: no-repeat;
+}
+
+h1.title {
+    color: #800080;
+	font-size: 3em;
+}
+
+img { border: 0; }
+
+.hidden { display: none; }
+
+input[type=text],textarea { 
+    background-color: #FFEEEE;
+    border: 2px solid #800080;
+}
+
+input[type=text]:focus,textarea:focus {
+    background-color: #FFB4C0;
+    border: 2px solid #0000FF;
+}
+
+select {
+    background-color: #FFEEEE;
+    border: 2px solid #800080;
+}
+
+select:focus {
+    background-color: #FFB4C0;
+    border: 2px solid #0000FF;
+}
+
+input[type=button],input[type=file],input[type=submit],button {
+    border: 2px solid #800080;
+    background-color: #FFEEEE;
+}
+
+input[type=button]:hover,input[type=file]:hover,input[type=submit]:hover,button:hover {
+    background-color: #FFAAAA;
+    border: 2px solid #0000FF
+}
+
+.fakelink {
+    color: #B56B93;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.fakelink:hover {
+    text-decoration: none;
+}
+
+/*structures*/
+#content {
+	width: 80%;
+	margin: auto;
+}
+
+.row {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+a:link {
+	/*font-weight: bold;
+	font-size: 1.25em;*/
+	color: #B56B93;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul {
+	list-style-image: url('img/plot-icon-10.png');
+}
+
+.hidden {
+	display: none;
+}
+
+/*
+.bar {
+	width: 20%;
+	margin: 10px;
+	padding: 0;
+    float: left;
+}
+
+
+
+.bar ul li a:link {
+	font-weight: bold;
+	font-size: 1.25em;
+	color: #B56B93;
+}
+
+.bar ul li a:hover {
+	text-decoration: none;
+	letter-spacing: 1.35;
+}
+
+.bar ul li a.important {
+	font-size: 1.5em;
+	color: #F00;
+}
+
+*/

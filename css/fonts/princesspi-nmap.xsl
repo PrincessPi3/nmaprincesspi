@@ -68,9 +68,9 @@
 
 @font-face {
   font-family: "Comic-Code-Regular";
-  src: url("/nmaprincesspi/font/Comic-Code-Regular.ttf"),
-       url("/nmaprincesspi/font/Comic-Code-Regular.woff"),
-       url("/nmaprincesspi/font/Comic-Code-Regular.otf");
+  src: url("/nmaprincesspi/css/fonts/Comic-Code-Regular.ttf"),
+       url("/nmaprincesspi/css/fonts/Comic-Code-Regular.woff"),
+       url("/nmaprincesspi/css/fonts/Comic-Code-Regular.otf");
 }
 
 /* stylesheet print */
@@ -147,7 +147,7 @@
 {
   body {
     font-family: "Comic-Code-Regular", "Comic Sans MS", "Comic Sans", sans-serif;
-    background-image: url('/nmaprincesspi/img/princesspi-large-alpha-transparency-more-faded.png');
+    background-image: url('/nmaprincesspi/css/img/princesspi-large-alpha-transparency-more-faded.png');
     background-repeat: no-repeat;
     background-color: #FFDDDD;
     margin: 0;
@@ -338,7 +338,7 @@
 
   <title>Princess Pi's Magical Nmap Scan Report! - Scanned at <xsl:value-of select="$start" /></title>
 
-	<link rel="icon" type="image/x-icon" href="/nmaprincesspi/img/favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="/nmaprincesspi/css/img/favicon.ico" />
    
     <script type="text/javascript">
      
