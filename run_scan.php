@@ -8,10 +8,11 @@
     }
 
     $file_name = date("Ymd-Hi-s") . "-" . rand(1000000,9999999) . ".xml";
-    $run_cmd = "bash scripts/run_scan.sh -oX scans/$file_name --stylesheet /nmaprincesspi/xsl/princesspi-nmap.xsl $post_cmd&";
+    $run_cmd = "bash ./scripts/run_scan.sh nmap -oX ./scans/$file_name --stylesheet /nmaprincesspi/xsl/princesspi-nmap.xsl $post_cmd";
     $web_name = "/nmaprincesspi/scans/$file_name";
 
     echo $web_name;
 
     $exec = shell_exec($run_cmd);
+    echo $exec;
 ?>
