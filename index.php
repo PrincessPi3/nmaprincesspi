@@ -14,7 +14,7 @@
         <br>
         <input type="text" id="nmapcmd" name="nmapcmd">
         <input type="button" onclick="runNmapScan()" value="Go, Baby, Go!">
-        <br>
+        <br><br>
         <span class="hidden" id="link"></span>
         <br>
         <pre class="hidden" id="progress">

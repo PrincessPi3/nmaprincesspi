@@ -1,8 +1,8 @@
 x xhr->run_scan.php
 x add random number to file to prevent enumeration
 x move and edit scripts
-status/notify when done
-    polling xml file?
+x status/notify when done
+x     polling xml file?
 error handling
     nmap fail
     php script fail

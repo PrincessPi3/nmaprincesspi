@@ -1,2 +1,7 @@
 v0.1-dev
     initial working state
+
+v0.2-dev
+    added polling system to monitor output
+    added logs dir
+    refactored js
