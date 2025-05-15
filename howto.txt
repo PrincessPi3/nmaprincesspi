@@ -1,1 +1,0 @@
--oX <filename> --stylesheet /nmaprincesspi/xsl/princesspi-nmap.xsl

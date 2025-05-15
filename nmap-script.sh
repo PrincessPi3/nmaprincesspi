@@ -1,6 +1,6 @@
 #!/bin/bash
-# alias nmap="/var/www/html/nmaprincesspi"
-scansPath="/var/www/html/nmap-scans"
+# alias nmap="/var/www/html/nmaprincesspi/nmap-script.sh"
+scansPath="/var/www/html/nmaprincesspi/scans"
 fileName="nmap-$(date +%Y%m%d-%H%M%S).xml"
 filePath="$scansPath/$fileName"
 webPath="http://10.0.0.51/nmap-scans/$fileName"
