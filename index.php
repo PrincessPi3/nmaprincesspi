@@ -9,6 +9,12 @@
     <title>Princess Pi's Magical Nmap Web Thingy!</title>
 </head>
 <body>
-    <h1>Princess Pi's Magical Nmap Web Thingy!</h1>    
+    <h1>Princess Pi's Magical Nmap Web Thingy!</h1>
+    <form action="run_scan.php" method="post">
+        <label for="nmapcmd">nmap command</label>
+        <br>
+        <input type="text" name="nmapcmd">
+        <input type="submit" value="Go, Baby, Go!">
+    </form>
 </body>
 </html>
