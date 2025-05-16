@@ -107,7 +107,7 @@ function xhrRunNmapScan(xhrRet) {
     getID('link').innerHTML = '<a href="'+xhrJson.webName+'">Scan Report ('+xhrJson.webName+')</a>';
     getID('link').style.display = "inline";
 
-    getID('progress').innerHTML = '';
+    getID('progressbox').innerHTML = '';
     getID('progress').style.display = 'none';
 
     pollFile(xhrJson.runningLog);
@@ -115,8 +115,8 @@ function xhrRunNmapScan(xhrRet) {
 
 function xhrPollFile(xhrRet) {
     let xhrResponseText = xhrRet.target.responseText;
-    getID('progress').innerHTML = xhrResponseText;
     getID('progress').style.display = "block";
+    getID('progressbox').innerHTML = xhrResponseText;
 }
 
 function pollFile(runningLog) {
@@ -127,7 +127,8 @@ function pollFile(runningLog) {
 
 function runNmapScan() {
     let nmapcmd = getID('nmapcmd').value;
-    let postData = 'nmapcmd='+encodeURIComponent(nmapcmd);
+    let nonce = getID('nonce').value;
+    let postData = 'nmapcmd='+encodeURIComponent(nmapcmd)+'&nonce='+nonce;
 
     doXhr('run_scan.php', xhrRunNmapScan, 'POST', postData);
 }

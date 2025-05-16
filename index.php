@@ -1,4 +1,8 @@
 <?php
+session_start();
+$nonce = hash('sha256', microtime() . rand(1000000, 9999999));
+$_SESSION['nonce'] = $nonce;
+
 $dir = './scans';
 $scans = array_diff(scandir($dir), array('..', '.')); # silly method to remove the . and ..
 foreach($scans as $scan) {
@@ -12,13 +16,14 @@ foreach($scans as $scan) {
     <link rel="stylesheet" href="css/nmaprincesspi.css">
     <script src="js/nmaprincesspi.js"></script>
     <link rel="icon" type="css/img/" href="css/img/favicon.ico">
-    <title>Princess Pi's Magical Nmap Web Thingy! (nmaprincesspi)</title>
+    <title>Princess Pi's Magical Nmapprincesspi Thingy!</title>
 </head>
 <body>
-    <h1>Princess Pi's Magical Nmap Web Thingy! (nmapprincesspi)</h1>
+    <h1>Princess Pi's Magical Nmapprincesspi Thingy!</h1>
         <label for="nmapcmd">nmap command</label>
         <br>
         <input type="text" id="nmapcmd" name="nmapcmd">
+        <input type="hidden" name="nonce" id="nonce" value="<?php echo $nonce; ?>">
         <input type="button" onclick="runNmapScan()" value="Go, Baby, Go!">
         <br>
         <br>
@@ -26,11 +31,12 @@ foreach($scans as $scan) {
         <br><br>
         <p class="hidden" id="link"></p>
         <div id="scanlist" class="hidden">
-        <p><a href="run_clear_scans.php">Delete All Old Scans</a></p>
-        <p>Progress<br><?php echo $scanList; ?></p>
+        <p><a href="run_clear_scans.php?nonce=<?php echo $nonce; ?>">Delete All Old Scans</a></p>
+        <p><?php echo $scanList; ?></p>
         </div>
-        <br>
-        <br>
-        <pre class="hidden" id="progress"></pre>
+        <div class="hidden" id="progress">
+        <p>Progress<br>
+        <pre id="progressbox"></pre>
+        </div>
 </body>
 </html>

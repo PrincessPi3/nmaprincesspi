@@ -1,5 +1,7 @@
 <?php
-    if(empty($_POST['nmapcmd'])) { die("nmapcmd POST var not found"); }
+    session_start();
+    if(empty($_POST['nmapcmd']) || empty($_SESSION['nonce'])) { die("POST var(s) not found"); }
+    if($_POST['nonce'] !== $_SESSION['nonce']) { die('csrf validation failed'); }
     
     $cleannmapcmd = escapeshellcmd($_POST['nmapcmd']);
 
