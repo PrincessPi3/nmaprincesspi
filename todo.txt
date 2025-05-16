@@ -8,8 +8,9 @@ error handling
     php script fail
     input validation fail
 containerize
-scans listing
-c work on scans filename?
+x scans listing
+clear scans buttons
+x work on scans filename?
 fix perms
 auth system
 input/output validation

@@ -6,6 +6,24 @@ function getID(ID) {
     return document.getElementById(ID);
 }
 
+function toggleShow(ID, htmlUpdateID=false, htmlUpdateShowing=false, htmlUpdateHidden=false) {
+    let elemClasses = getID(ID).classList;
+
+    if(elemClasses.contains('hidden')) {
+        elemClasses.remove('hidden');
+
+        if(htmlUpdateID !== false && htmlUpdateShowing !== false && htmlUpdateHidden !== false) {
+            getID(htmlUpdateID).innerHTML = htmlUpdateShowing;
+        }
+    } else {
+        elemClasses.add('hidden');
+
+        if(htmlUpdateID !== false && htmlUpdateShowing !== false && htmlUpdateHidden !== false) {
+            getID(htmlUpdateID).innerHTML = htmlUpdateHidden;
+        }
+    }
+}
+
 function copyToClipboard(ID) {
     let copyText = getID(ID);
     copyText.select();
@@ -72,7 +90,7 @@ function xhrRunNmapScan(xhrRet) {
     // let xhrResponseText = xhrRet.target.responseText;
     xhrJson = JSON.parse(xhrRet.target.responseText);
 
-    getID('link').innerHTML = '<a href="'+xhrJson.webName+'">Scan Report Here ('+xhrJson.webName+')</a>';
+    getID('link').innerHTML = '<a href="'+xhrJson.webName+'">Scan Report ('+xhrJson.webName+')</a>';
     getID('link').style.display = "inline";
 
     if(typeof pollInterval !== 'undefined') {
@@ -104,3 +122,4 @@ function runNmapScan() {
 
     doXhr('run_scan.php', xhrRunNmapScan, 'POST', postData);
 }
+

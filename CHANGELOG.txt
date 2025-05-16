@@ -5,3 +5,7 @@ v0.2-dev
     added polling system to monitor output
     added logs dir
     refactored js
+
+v0.3-dev
+    added toggleable list of previous scans
+    added link to clear all old scans

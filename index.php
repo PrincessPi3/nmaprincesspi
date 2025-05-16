@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+$dir = './scans';
+$scans = array_diff(scandir($dir), array('..', '.')); # silly method to remove the . and ..
+foreach($scans as $scan) {
+    $scanList .= "<a href='/nmaprincesspi/scans/$scan'>$scan<a><br>\n";
+}
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,10 +20,17 @@
         <br>
         <input type="text" id="nmapcmd" name="nmapcmd">
         <input type="button" onclick="runNmapScan()" value="Go, Baby, Go!">
-        <br><br>
-        <span class="hidden" id="link"></span>
         <br>
-        <pre class="hidden" id="progress">
-        </pre>
+        <br>
+        <span class="fakelink" id="showlist" onclick="toggleShow('scanlist', 'showlist', 'Hide Previous Scans', 'Show Previous Scans')">Show Previous Scans</span>
+        <br>
+        <p class="hidden" id="link"></p>
+        <div id="scanlist" class="hidden">
+            <p><a href="run_clear_scans.php">Delete All Old Scans</a></p>
+            <p><?php echo $scanList; ?></p>
+        </div>
+        <br>
+        <br>
+        <pre class="hidden" id="progress"></pre>
 </body>
 </html>
