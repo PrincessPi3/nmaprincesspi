@@ -12,17 +12,24 @@ function getID(ID) {
 function toggleShow(ID, htmlUpdateID=false, htmlUpdateShowing=false, htmlUpdateHidden=false) {
     let elemClasses = getID(ID).classList;
 
+    if(htmlUpdateID !== false && htmlUpdateShowing !== false && htmlUpdateHidden !== false) {
+        const updating = true;
+        updateElem = getID(htmlUpdateID).innerHTML;
+    } else {
+        const updating = false;
+    }
+
     if(elemClasses.contains('hidden')) {
         elemClasses.remove('hidden');
 
-        if(htmlUpdateID !== false && htmlUpdateShowing !== false && htmlUpdateHidden !== false) {
-            getID(htmlUpdateID).innerHTML = htmlUpdateShowing;
+        if(updating) {
+            updateElem = htmlUpdateShowing;
         }
     } else {
         elemClasses.add('hidden');
 
-        if(htmlUpdateID !== false && htmlUpdateShowing !== false && htmlUpdateHidden !== false) {
-            getID(htmlUpdateID).innerHTML = htmlUpdateHidden;
+        if(updating) {
+            updateElem = htmlUpdateHidden;
         }
     }
 }

@@ -16,6 +16,10 @@ fix perms
 auth system
 input/output validation
     x escapeshellcmd
+layout
+    collums
+    do not show scan list text when empty
+    figure out some kinda command ran for anchor text on previous scans
 work on princesspi-nmap.xsl
     clean up
     minimize stuff

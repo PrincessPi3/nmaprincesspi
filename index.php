@@ -26,9 +26,8 @@ foreach($scans as $scan) {
         <br><br>
         <p class="hidden" id="link"></p>
         <div id="scanlist" class="hidden">
-            <p><a href="run_clear_scans.php">Delete All Old Scans</a></p>
-            <p>Progress</p>
-            <p><?php echo $scanList; ?></p>
+        <p><a href="run_clear_scans.php">Delete All Old Scans</a></p>
+        <p>Progress<br><?php echo $scanList; ?></p>
         </div>
         <br>
         <br>

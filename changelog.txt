@@ -9,3 +9,8 @@ v0.2-dev
 v0.3-dev
     added toggleable list of previous scans
     added link to clear all old scans
+
+v0.4-dev
+    bug fixes
+    layout improvements
+    efficiency improvements
