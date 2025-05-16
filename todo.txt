@@ -2,21 +2,24 @@ x xhr->run_scan.php
 x add random number to file to prevent enumeration
 x move and edit scripts
 x status/notify when done
-x     polling xml file?
+x   polling xml file?
 error handling
     nmap fail
     php script fail
     input validation fail
 containerize
 x scans listing
-clear scans buttons
+x clear scans buttons
 x work on scans filename?
 fix perms
 auth system
 input/output validation
+    x escapeshellcmd
 work on princesspi-nmap.xsl
     clean up
     minimize stuff
         remove rundundant code
     make prettier
         green class
+        padding on table items
+        centering text on table headers

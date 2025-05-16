@@ -12,10 +12,10 @@ foreach($scans as $scan) {
     <link rel="stylesheet" href="css/nmaprincesspi.css">
     <script src="js/nmaprincesspi.js"></script>
     <link rel="icon" type="css/img/" href="css/img/favicon.ico">
-    <title>Princess Pi's Magical Nmap Web Thingy!</title>
+    <title>Princess Pi's Magical Nmap Web Thingy! (nmaprincesspi)</title>
 </head>
 <body>
-    <h1>Princess Pi's Magical Nmap Web Thingy!</h1>
+    <h1>Princess Pi's Magical Nmap Web Thingy! (nmapprincesspi)</h1>
         <label for="nmapcmd">nmap command</label>
         <br>
         <input type="text" id="nmapcmd" name="nmapcmd">
@@ -23,10 +23,11 @@ foreach($scans as $scan) {
         <br>
         <br>
         <span class="fakelink" id="showlist" onclick="toggleShow('scanlist', 'showlist', 'Hide Previous Scans', 'Show Previous Scans')">Show Previous Scans</span>
-        <br>
+        <br><br>
         <p class="hidden" id="link"></p>
         <div id="scanlist" class="hidden">
             <p><a href="run_clear_scans.php">Delete All Old Scans</a></p>
+            <p>Progress</p>
             <p><?php echo $scanList; ?></p>
         </div>
         <br>
