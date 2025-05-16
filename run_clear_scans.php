@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if($_GET['nonce'] !== $_SESSION['nonce']) { die('csrf validation failed'); }
 
 $scansDir = './scans';
