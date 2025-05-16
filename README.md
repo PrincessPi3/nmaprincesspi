@@ -6,3 +6,8 @@ add alias to .zshrc or .basrc
   
 manuual  
     `nmap -oX /var/www/html/nmaprincesspi/scans/FILENMAME.xml --stylesheet /nmaprincesspi/xsl/princesspi-nmap.xsl`
+
+Designed to run on apache2 and php
+
+need to make a .htpasswd file and put it somewhere  
+    https://www.web2generators.com/apache-tools/htpasswd-generator

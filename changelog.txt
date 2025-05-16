@@ -19,3 +19,9 @@ v0.5-dev
     added csrf protection
     bug fixes
     layout improvements
+
+v0.6-dev
+    added basic html auth (apache2)
+    cleaned up code
+    added nmap reference link
+    open xml and nmap reference links in new tab

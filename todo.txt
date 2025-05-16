@@ -7,19 +7,25 @@ x bug on second scan in progress pre
 error handling
     nmap fail
     php script fail
-    input validation fail
-containerize
+    x input validation fail
+    x csrf validation fail
+    xhr fail
+"finished" notification by parsing xml for end bits
+keep alive check with ps aux type thingggg
 x scans listing
 x clear scans buttons
 x work on scans filename?
 fix perms
-auth system
+x auth system
 input/output validation
     x escapeshellcmd
 layout
     collums
     do not show scan list text when empty
     figure out some kinda command ran for anchor text on previous scans
+        by parsing xml fmmmm
+    autoscroll
+        floating "top" button
 work on princesspi-nmap.xsl
     clean up
     minimize stuff
@@ -28,3 +34,9 @@ work on princesspi-nmap.xsl
         green class
         padding on table items
         centering text on table headers
+containerize
+    nmap docker?
+        perms?
+            script with sticky bit?
+    custom docker?
+    docker inside docker?

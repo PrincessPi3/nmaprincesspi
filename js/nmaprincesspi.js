@@ -11,25 +11,24 @@ function getID(ID) {
 
 function toggleShow(ID, htmlUpdateID=false, htmlUpdateShowing=false, htmlUpdateHidden=false) {
     let elemClasses = getID(ID).classList;
+    var updating = false;
 
     if(htmlUpdateID !== false && htmlUpdateShowing !== false && htmlUpdateHidden !== false) {
-        const updating = true;
-        updateElem = getID(htmlUpdateID).innerHTML;
-    } else {
-        const updating = false;
-    }
+        updating = true;
+        var updateElem = getID(htmlUpdateID);
+    } 
 
     if(elemClasses.contains('hidden')) {
         elemClasses.remove('hidden');
 
-        if(updating) {
-            updateElem = htmlUpdateShowing;
+        if(updating === true) {
+            updateElem.innerHTML = htmlUpdateShowing;
         }
     } else {
         elemClasses.add('hidden');
 
-        if(updating) {
-            updateElem = htmlUpdateHidden;
+        if(updating === true) {
+            updateElem.innerHTML = htmlUpdateHidden;
         }
     }
 }
@@ -104,7 +103,7 @@ function xhrRunNmapScan(xhrRet) {
         clearInterval(pollInterval);
     }
 
-    getID('link').innerHTML = '<a href="'+xhrJson.webName+'">Scan Report ('+xhrJson.webName+')</a>';
+    getID('link').innerHTML = '<a href="'+xhrJson.webName+'" target="_blank">Scan Report ('+xhrJson.webName+')</a>';
     getID('link').style.display = "inline";
 
     getID('progressbox').innerHTML = '';
@@ -133,3 +132,17 @@ function runNmapScan() {
     doXhr('run_scan.php', xhrRunNmapScan, 'POST', postData);
 }
 
+/* listeners */
+window.onload = function() {
+    let cmdform = getID('cmdform');
+    let showlist = getID('showlist');
+
+    cmdform.addEventListener('submit', function(event) {
+        event.preventDefault(); // prevents loading new page
+        runNmapScan();
+    });
+
+    showlist.addEventListener('click', function(event) {
+        toggleShow('scanlist', 'showlist', 'Hide Previous Scans', 'Show Previous Scans');
+    });
+}
