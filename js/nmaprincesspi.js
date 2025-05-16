@@ -2,6 +2,9 @@
     Princess Pi's Magical Standard Code!
 */
 
+// globals
+var pollInterval = null;
+
 function getID(ID) {
     return document.getElementById(ID);
 }
@@ -90,18 +93,17 @@ function xhrRunNmapScan(xhrRet) {
     // let xhrResponseText = xhrRet.target.responseText;
     xhrJson = JSON.parse(xhrRet.target.responseText);
 
-    getID('link').innerHTML = '<a href="'+xhrJson.webName+'">Scan Report ('+xhrJson.webName+')</a>';
-    getID('link').style.display = "inline";
-
-    if(typeof pollInterval !== 'undefined') {
+    if(pollInterval !== null && typeof pollInterval !== 'undefined') {
         clearInterval(pollInterval);
     }
+
+    getID('link').innerHTML = '<a href="'+xhrJson.webName+'">Scan Report ('+xhrJson.webName+')</a>';
+    getID('link').style.display = "inline";
 
     getID('progress').innerHTML = '';
     getID('progress').style.display = 'none';
 
     pollFile(xhrJson.runningLog);
-
 }
 
 function xhrPollFile(xhrRet) {
@@ -111,7 +113,7 @@ function xhrPollFile(xhrRet) {
 }
 
 function pollFile(runningLog) {
-    var pollInterval = setInterval(function() {
+    pollInterval = setInterval(function() {
         doXhr(runningLog, xhrPollFile);
     }, 1000);
 }

@@ -3,6 +3,7 @@ x add random number to file to prevent enumeration
 x move and edit scripts
 x status/notify when done
 x   polling xml file?
+x bug on second scan in progress pre
 error handling
     nmap fail
     php script fail
